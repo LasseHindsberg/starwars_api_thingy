@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./../img/star-wars-backgrounds-25.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Alata', sans-serif;
+    transition: opacity .5s;
+
+}
+#characterCard {
+    background-image: url(./../img/SecondaryBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: opacity .5s;
+}
+.wrapper {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Geostar Fill", cursive;
+    text-align: center;
+    color: var(--text-colour);
+    
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
+    border-bottom: dashed 5px var(--lightest-background-colour);
+}
+h3 {
+    font-size: 1.5em;
+    
+}
+
+li {
+    list-style-type: none;
+    font-weight: lighter;
+}
+
+ul li a,p {
+    color: var(--text-colour);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+nav.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #region Link Nav */
+.starwarsButton {
+    /* Button styling */
+    border: solid snow thin;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0.10em 0.10em rgba(0, 0, 0, 0.65);
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+a.starwarsButton {
+    padding: 25px;
+    margin: 8px;
+    width: 200px;
+    height: 80px;
+}
+
+/* Specific destinations - styling for each button */
+#hoth {
+    background-image: url(../img/hoth.jpg);
+}
+
+#tatooine {
+    background-image: url(../img/tatooine.jpeg);
+}
+
+#endor {
+    background-image: url(../img/endor.jpg);
+}
+
+#dagobah {
+    background-image: url(../img/dagobah.jpeg);
+}
+
+#jakku {
+    background-image: url(../img/Jakku.jpeg);
+
+}
+
+#starKillerBase {
+    background-image: url(../img/StarKillerBase.jpeg);
+}
+
+#serenno {
+    background-image: url(../img/Serenno.jpg);
+}
+#deathStar {
+    background-image: url(../img/DeathStar2jpg.jpg)
+}
+/* #endregion */
+
+/* #region characterDescription */
+#characterDescription {
+    font-family: "Geostar Fill", cursive;
+    height: 80vh;
+}
+
+#characterDescription p,span {
+    font-size: 2em;
+}
+
+#characterDescription p{
+    color: grey;
+    margin-top: 100px;
+}
+#characterDescription span{
+    color: var(--text-colour);
+}
+/* #endregion */
+
+/* #region planetDescription */
+#planetDescription {
+    font-family: "Geostar Fill", cursive;
+    height: 80vh;
+}
+
+#planetDescription p,span {
+    font-size: 1.5em;
+}
+
+#planetDescription p{
+    color: grey;
+    margin-top: 100px;
+}
+#planetDescription span{
+    color: var(--text-colour);
+}
+
+
+:root {
+    --text-colour: #F2EBDC;
+    --background-colour: #25314069;
+    --background-colour-noTransparance: #253140;
+    --lighter-background-colour: #3C5973;
+    --lightest-background-colour: #7C92A6;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+/* 
+Color Theme Swatches in Hex
+.FAR-FAR-AWAY-PT.2-1-hex { color: #97A699; }
+.FAR-FAR-AWAY-PT.2-2-hex { color: #647362; }
+.FAR-FAR-AWAY-PT.2-3-hex { color: #400D0D; }
+.FAR-FAR-AWAY-PT.2-4-hex { color: #260A0A; }
+.FAR-FAR-AWAY-PT.2-5-hex { color: #D94848; }
+
+Color Theme Swatches in RGBA
+.FAR-FAR-AWAY-PT.2-1-rgba { color: rgba(150, 165, 153, 1); }
+.FAR-FAR-AWAY-PT.2-2-rgba { color: rgba(99, 114, 97, 1); }
+.FAR-FAR-AWAY-PT.2-3-rgba { color: rgba(63, 12, 12, 1); }
+.FAR-FAR-AWAY-PT.2-4-rgba { color: rgba(38, 9, 9, 1); }
+.FAR-FAR-AWAY-PT.2-5-rgba { color: rgba(216, 71, 71, 1); }
+
+Color Theme Swatches in HSLA
+.FAR-FAR-AWAY-PT.2-1-hsla { color: hsla(129, 7, 62, 1); }
+.FAR-FAR-AWAY-PT.2-2-hsla { color: hsla(112, 8, 41, 1); }
+.FAR-FAR-AWAY-PT.2-3-hsla { color: hsla(0, 66, 15, 1); }
+.FAR-FAR-AWAY-PT.2-4-hsla { color: hsla(0, 60, 9, 1); }
+.FAR-FAR-AWAY-PT.2-5-hsla { color: hsla(0, 65, 56, 1); } */
