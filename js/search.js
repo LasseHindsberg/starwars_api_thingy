@@ -1,16 +1,27 @@
-let url = new URLSearchParams(window.location.search);
+let spinner = document.querySelector(".spinner");
 
+let url = new URLSearchParams(window.location.search);
 if (url.get("keyword")) {
-    fetch("https://swapi.dev/api/people/")
+    fetch(`https://swapi.dev/api/people?search=${url.get("keyword")}`)
     .then(res =>res.json())
     .then(function(data) {
-        let results = data.results;
-        // console.log(results);
+        spinner.remove();
 
-        let matches = results.filter(function(result) {
-            return result.name.includes(url.get("keyword").toLowerCase());
-        })
+        let ul = document.querySelector(".characterList");
+        let template = document.querySelector("#template");
 
-        console.log(matches)
+
+        data.results.forEach(result => {
+            let array = result.url.split("/");
+            let id = array[array.length - 2];
+
+            let clone = template.content.cloneNode(true);
+            clone.querySelector(".listItem").innerText = result.name;
+            clone.querySelector(".listItem").href = `/character-sheet.html?id=${id}`;
+            ul.appendChild(clone);
+        });
+        console.log(data.results)
     });
+
+    
 }
